@@ -6,5 +6,6 @@ import androidx.room.Entity
 data class Money(
     var reason: String,
     var how: String,
-    var money: Int
+    var money: Int,
+    var date: String
 )
