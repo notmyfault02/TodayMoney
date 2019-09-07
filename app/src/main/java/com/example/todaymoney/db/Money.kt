@@ -1,11 +1,16 @@
 package com.example.todaymoney.db
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity
-data class Money(
+class Money(
+    @PrimaryKey(autoGenerate = true)
+    var id: Int,
     var reason: String,
     var how: String,
     var money: Int,
     var date: String
-)
+) {
+    constructor(): this(0,"", "", 0, "")
+}
