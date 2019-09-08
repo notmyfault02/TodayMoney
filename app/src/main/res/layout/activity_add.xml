@@ -5,6 +5,21 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.AddActivity">
+        tools:context=".ui.AddActivity"
+        android:background="#FFFFFF">
 
+    <Spinner
+            android:background="@drawable/custom_spiner"
+            android:layout_width="152dp"
+            android:layout_height="29dp"
+            android:id="@+id/add_how_spn" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/add_tool_spn" android:layout_marginEnd="8dp"/>
+    <Spinner
+            android:background="@drawable/custom_spiner"
+            android:layout_width="152dp"
+            android:layout_height="29dp"
+            android:id="@+id/add_tool_spn" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/add_how_spn" android:layout_marginStart="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
