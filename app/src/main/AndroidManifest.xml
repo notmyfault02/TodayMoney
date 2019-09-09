@@ -9,7 +9,8 @@
             android:roundIcon="@mipmap/ic_money_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ui.AddActivity">
+        <activity android:name=".ui.AddActivity"
+                android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
         <activity
                 android:name=".SplashActivity"

@@ -2,11 +2,15 @@ package com.example.todaymoney
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.todaymoney.db.AppDatabase
 import com.example.todaymoney.db.Money
+import com.example.todaymoney.ui.AddActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.sdk27.coroutines.onClick
+import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var btn = findViewById<Button>(R.id.main_add_btn)
         appDB = AppDatabase.getInstance(this)
         mainAdapter = MainAdapter(this, items)
 
@@ -40,5 +45,13 @@ class MainActivity : AppCompatActivity() {
         val thread = Thread(loadRunnable)
         thread.start()
 
+        btn.onClick {
+            onPopup()
+        }
+
+    }
+
+    fun onPopup() {
+        startActivity<AddActivity>()
     }
 }

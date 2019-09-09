@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_how">
+        <item>수입</item>
+        <item>지출</item>
+    </string-array>
+    <string-array name="spinner_tool">
+        <item>계좌</item>
+        <item>현찰</item>
+    </string-array>
+</resources>
