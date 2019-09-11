@@ -9,8 +9,8 @@ class Money(
     var id: Int,
     var reason: String,
     var how: String,
-    var money: Int,
+    var money: String,
     var date: String
 ) {
-    constructor(): this(0,"", "", 0, "")
+    constructor(): this(0,"", "", "", "")
 }

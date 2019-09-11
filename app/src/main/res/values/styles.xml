@@ -8,8 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="SplashTheme"
-           parent="Theme.AppCompat.NoActionBar">
+           parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/todaymoney_icon_small_last</item>
+    </style>
+    <style name="DialogTheme"
+           parent="Theme.AppCompat.Light.Dialog">
     </style>
 
 

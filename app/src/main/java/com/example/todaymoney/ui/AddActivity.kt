@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.todaymoney.R
 import com.example.todaymoney.db.AppDatabase
 import com.example.todaymoney.db.Money
+import kotlinx.android.synthetic.main.activity_add.*
+import org.jetbrains.anko.sdk27.coroutines.onClick
 import java.util.*
 
 class AddActivity : AppCompatActivity() {
@@ -23,7 +25,16 @@ class AddActivity : AppCompatActivity() {
 
         var addRunnable =  Runnable {
             val newRecord = Money()
-            //newRecord.reason =
+            newRecord.reason = add_reason_et.text.toString()
+            newRecord.money = add_money_et.text.toString()
+            newRecord.date = "${calendar.get(GregorianCalendar.YEAR)}.${calendar.get(GregorianCalendar.MONTH)}.${calendar.get(GregorianCalendar.DATE)}"
+            appDb?.MoneyDao()?.insertMoney(newRecord)
+        }
+
+        add_ok_btn.onClick {
+            val thread = Thread(addRunnable)
+            thread.start()
+            finish()
         }
     }
 }

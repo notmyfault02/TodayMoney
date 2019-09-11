@@ -10,7 +10,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".ui.AddActivity"
-                android:theme="@style/Theme.AppCompat.Light.Dialog">
+                android:theme="@style/DialogTheme">
         </activity>
         <activity
                 android:name=".SplashActivity"

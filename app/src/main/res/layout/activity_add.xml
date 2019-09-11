@@ -26,6 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/add_how_spn" android:layout_marginStart="8dp"/>
     <EditText
+            android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_spiner"
@@ -36,6 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/add_how_spn" android:hint="이유" android:textColor="#000000"/>
     <EditText
+            android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -44,7 +46,20 @@
             android:ems="10"
             android:id="@+id/add_money_et" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/add_reason_et" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:hint="금액"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="금액"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_reason_et"/>
+    <Button
+            android:background="@drawable/custom_spiner"
+            android:text="확인"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_ok_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_money_et"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

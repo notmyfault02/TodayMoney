@@ -1,8 +1,8 @@
 package com.example.todaymoney
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import org.jetbrains.anko.startActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -10,6 +10,8 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        startActivity<MainActivity>()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
