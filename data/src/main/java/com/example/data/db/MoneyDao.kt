@@ -1,10 +1,10 @@
-package com.example.todaymoney.db.dao
+package com.example.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.todaymoney.db.Money
+import com.example.data.entities.Money
 
 @Dao
 interface MoneyDao {

@@ -1,10 +1,10 @@
-package com.example.todaymoney.db
+package com.example.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.todaymoney.db.dao.MoneyDao
+import com.example.data.entities.Money
 
 @Database(entities = [Money::class], version = 1)
 abstract class AppDatabase: RoomDatabase() {

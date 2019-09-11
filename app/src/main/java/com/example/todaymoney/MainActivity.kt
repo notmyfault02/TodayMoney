@@ -5,8 +5,8 @@ import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.todaymoney.db.AppDatabase
-import com.example.todaymoney.db.Money
+import com.example.data.db.AppDatabase
+import com.example.data.entities.Money
 import com.example.todaymoney.ui.AddActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.sdk27.coroutines.onClick

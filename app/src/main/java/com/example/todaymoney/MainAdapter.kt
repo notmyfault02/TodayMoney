@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.todaymoney.db.Money
+import com.example.data.entities.Money
 import kotlinx.android.synthetic.main.item_money.view.*
 
 class MainAdapter(val context: Context, val items: List<Money>): RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
