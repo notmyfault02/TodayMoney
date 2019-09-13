@@ -23,10 +23,14 @@ class MainAdapter(val context: Context, val items: List<Money>): RecyclerView.Ad
     inner class MainViewHolder(val view: View): RecyclerView.ViewHolder(view) {
         fun bind(item: Money) {
             with(view) {
-                main_money_tv.text = item.money.toString()
+                main_money_tv.text = item.money
                 main_reason_tv.text = item.reason
                 main_date_tv.text = item.date
                 main_time_tv.text = item.time
+                if (item.how == "수입")
+                    main_how_iv.setImageResource(R.drawable.ic_add_black_24dp)
+                else
+                    main_how_iv.setImageResource(R.drawable.ic_remove_black_24dp)
             }
         }
 
