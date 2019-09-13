@@ -10,7 +10,8 @@ class Money(
     var reason: String,
     var how: String,
     var money: String,
-    var date: String
+    var date: String,
+    var time: String
 ) {
-    constructor(): this(0,"", "", "", "")
+    constructor(): this(0,"", "", "", "", "")
 }

@@ -30,6 +30,7 @@ class AddActivity : AppCompatActivity() {
             newRecord.money = add_money_et.text.toString()
             newRecord.date = "${calendar.get(GregorianCalendar.YEAR)}.${calendar.get(GregorianCalendar.MONTH)}.${calendar.get(GregorianCalendar.DATE)}"
             newRecord.how = add_how_spn.selectedItem.toString()
+            newRecord.time = "${calendar.get(GregorianCalendar.HOUR)}:${calendar.get(GregorianCalendar.MINUTE)}"
             Log.d("addActivity", newRecord.how)
             appDb?.MoneyDao()?.insertMoney(newRecord)
         }

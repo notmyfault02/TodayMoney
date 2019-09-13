@@ -26,7 +26,7 @@ class MainAdapter(val context: Context, val items: List<Money>): RecyclerView.Ad
                 main_money_tv.text = item.money.toString()
                 main_reason_tv.text = item.reason
                 main_date_tv.text = item.date
-
+                main_time_tv.text = item.time
             }
         }
 
