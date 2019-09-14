@@ -2,6 +2,7 @@
 
 ext {
     room = "androidx.room:room-runtime:2.1.0"
+    room_rxjava = "androidx.room:room-rxjava2:2.1.0"
 
     anko = "org.jetbrains.anko:anko:0.10.8"
     koin = 'org.koin:koin-android:2.0.1'

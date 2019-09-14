@@ -38,4 +38,5 @@ dependencies {
 
     implementation rootProject.ext.room
     kapt "androidx.room:room-compiler:2.1.0"
+    implementation rootProject.ext.room_rxjava
 }

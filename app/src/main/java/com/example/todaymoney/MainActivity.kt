@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         appDB = AppDatabase.getInstance(this)
         mainAdapter = MainAdapter(this, items)
 
+        val mainLayoutManager = LinearLayoutManager(this)
+        mainLayoutManager.reverseLayout
+        mainLayoutManager.stackFromEnd
+
         var loadRunnable = Runnable {
             try {
                 items = appDB?.MoneyDao()?.getMoney()!!
@@ -35,8 +39,7 @@ class MainActivity : AppCompatActivity() {
                 mainAdapter.notifyDataSetChanged()
 
                 rv_main.adapter = mainAdapter
-                rv_main.layoutManager = LinearLayoutManager(this)
-
+                rv_main.layoutManager = mainLayoutManager
             } catch (e: Exception) {
                 Log.d("main", e.toString())
             }

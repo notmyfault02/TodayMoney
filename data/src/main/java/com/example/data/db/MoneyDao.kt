@@ -13,4 +13,7 @@ interface MoneyDao {
 
     @Query("SELECT * FROM Money")
     fun getMoney(): List<Money>
+
+    @Query("DELETE FROM Money")
+    fun deleteAllRecord()
 }
