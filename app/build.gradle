@@ -22,6 +22,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -41,9 +45,14 @@ dependencies {
     kapt "androidx.room:room-compiler:2.1.0"
     implementation rootProject.ext.room_rxjava
 
+    implementation rootProject.ext.rxjava
+    implementation rootProject.ext.rxandroid
+
     implementation "org.jetbrains.anko:anko:0.10.8"
     implementation "org.jetbrains.anko:anko-commons:0.10.8"
 
-    implementation 'org.koin:koin-android:2.0.1'
+    implementation rootProject.ext.koin
+    implementation rootProject.ext.koin_android
+    implementation rootProject.ext.koin_viewmodel
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 }

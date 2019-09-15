@@ -1,4 +1,4 @@
-package com.example.todaymoney
+package com.example.todaymoney.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.data.db.AppDatabase
 import com.example.data.entities.Money
-import com.example.todaymoney.ui.AddActivity
+import com.example.todaymoney.MainAdapter
+import com.example.todaymoney.R
+import com.example.todaymoney.ui.add.AddActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.startActivity
