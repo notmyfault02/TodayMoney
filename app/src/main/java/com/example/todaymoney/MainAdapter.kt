@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.data.entities.Money
 import kotlinx.android.synthetic.main.item_money.view.*
 
-class MainAdapter(val context: Context, val items: List<Money>): RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
+class MainAdapter(val context: Context, var items: List<Money>): RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return MainViewHolder(LayoutInflater.from(context).inflate(R.layout.item_money, parent, false))
@@ -34,5 +34,10 @@ class MainAdapter(val context: Context, val items: List<Money>): RecyclerView.Ad
             }
         }
 
+    }
+
+    fun setRecord(record: List<Money>) {
+        this.items = record
+        notifyDataSetChanged()
     }
 }

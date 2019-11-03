@@ -5,7 +5,7 @@ import android.util.Log
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.example.data.db.AppDatabase
+import com.example.data.local.AppDatabase
 import com.example.data.entities.Money
 import com.example.todaymoney.R
 import com.example.todaymoney.databinding.ActivityAddBinding
